@@ -1,4 +1,4 @@
-JQuery plugins that returns a hash from serialization of a form. It supports brakets on input names.
+JQuery plugin that returns a hash from serialization of a form. It supports brakets on input names.
 
 It is convenient if you want to get values from a form and merge it with an other hash for example.
 
