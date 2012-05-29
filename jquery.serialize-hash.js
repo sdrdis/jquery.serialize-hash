@@ -37,11 +37,13 @@
       return stringKey(newKey, newValue);
     }
 
-    $.each(this.serializeArray(), function() {
-      $.extend(true, hash, stringKey(this.name, this.value));
+    var els = $(this).find(':input').get();
+    $.each(els, function() {
+        if (this.name && !this.disabled && (this.checked || /select|textarea/i.test(this.nodeName) || /text|hidden|password/i.test(this.type))) {
+            var val = $(this).val();
+            $.extend(true, hash, stringKey(this.name, val));
+        }
     });
     return hash;
   };
 })(jQuery);
-
-
