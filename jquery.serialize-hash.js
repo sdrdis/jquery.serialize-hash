@@ -2,7 +2,7 @@
   $.fn.serializeHash = function() {
     var hash = {};
     /***
-     JQuery plugin that returns a hash from serialization of any form or dom element. It supports brakets on input names.
+     JQuery plugin that returns a hash from serialization of any form or dom element. It supports Brackets on input names.
      It is convenient if you want to get values from a form and merge it with an other hash for example.
 
      ** Added by rilinor on 29/05/2012 : jquery serialize hash now support serialization of any dom elements (before, only form were supported). Thanks !
@@ -28,15 +28,15 @@
      }
      ***/
     function stringKey(key, value) {
-      var beginBraket = key.lastIndexOf('[');
-      if (beginBraket == -1) {
+      var beginBracket = key.lastIndexOf('[');
+      if (beginBracket == -1) {
         var hash = {};
         hash[key] = value;
         return hash;
       }
-      var newKey = key.substr(0, beginBraket);
+      var newKey = key.substr(0, beginBracket);
       var newValue = {};
-      newValue[key.substring(beginBraket + 1, key.length - 1)] = value;
+      newValue[key.substring(beginBracket + 1, key.length - 1)] = value;
       return stringKey(newKey, newValue);
     }
 
