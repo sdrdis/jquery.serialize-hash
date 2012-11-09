@@ -4,9 +4,9 @@
     /***
      JQuery plugin that returns a hash from serialization of any form or dom element. It supports brakets on input names.
      It is convenient if you want to get values from a form and merge it with an other hash for example.
-     
+
      ** Added by rilinor on 29/05/2012 : jquery serialize hash now support serialization of any dom elements (before, only form were supported). Thanks !
-     
+
      Example:
      ---------- HTML ----------
      <form id="form">
@@ -42,7 +42,7 @@
 
     var els = $(this).find(':input').get();
     $.each(els, function() {
-        if (this.name && !this.disabled && (this.checked || /select|textarea/i.test(this.nodeName) || /text|hidden|password/i.test(this.type))) {
+        if (this.name && !this.disabled && (this.checked || /select|textarea/i.test(this.nodeName) || /hidden|text|search|tel|url|email|password|datetime|date|month|week|time|datetime-local|number|range|color/i.test(this.type))) {
             var val = $(this).val();
             $.extend(true, hash, stringKey(this.name, val));
         }
