@@ -43,7 +43,7 @@ Here we have a form with traditional `type="text"` input field, an HTML5 `type="
 ##Contributions
 
 #####Added by [Rilinor](https://github.com/Rilinor) on 29/05/2012:
-jQuery serialize hash now support serialization of any dom elements (before, only form were supported). Thanks !
+jQuery serialize hash now support serialization of any dom elements (before, only form were supported). Thanks!
 
 #####Added by [Hemphill](https://github.com/Hemphill) on 09/11/2012:
-Adds support for HTML5 input types: search, tel, url, email, datetime, date, month, week, time, datetime-local, number, range, & color.
+Adds support for HTML5 input types: search, tel, url, email, datetime, date, month, week, time, datetime-local, number, range, & color. Thanks!
