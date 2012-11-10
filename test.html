@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Test page for jquery.serialize.hash</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="jquery.serialize-hash.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        console.log($('#form').serializeHash());
+        /* Should log:
+          {
+            firstkey: 'val1',
+            email: 'me@example.com',
+            secondkey: {
+              0: 'val2',
+              1: 'val3',
+              key: 'val4'
+            }
+          }
+        */
+      });
+    </script>
+  </head>
+  <body>
+    <form id="form">
+      <input type="text" name="firstkey" value="val1" />
+      <input type="email" name="email" value="me@example.com" />
+      <input type="hidden" name="secondkey[0]" value="val2" />
+      <input type="hidden" name="secondkey[1]" value="val3" />
+      <input type="hidden" name="secondkey[key]" value="val4" />
+    </form>
+  </body>
+</html>
