@@ -1,5 +1,7 @@
 #jQuery Serialize Hash plugin
 
+Hosted on [Github](https://github.com/sdrdis/jquery.serialize-hash) by [Sébastien Drouyer](https://github.com/sdrdis) under an MIT licence.
+
 jQuery plugin that returns a hash from serialization of a form or any DOM element. It supports brackets on input names for nested hashes.
 
 It is convenient if you want to get values from a form and merge it with another hash, or anywhere JSON is need. Plays nice with tools like Handlebars.js, Backbone.js or anything else that uses JSON.
