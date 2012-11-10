@@ -6,7 +6,7 @@ It is convenient if you want to get values from a form and merge it with another
 
 #Example:
 
-Here we have a form with traditional `type="text"` input field, an HTML5 `type="email"` input field, and a set of `type="hidden"` input fields making up an embeded hash. It outputs a nicely formatted JSON hash using the name attribute as the key and the value attribute as the value.
+Here we have a form with traditional `type="text"` input field, an HTML5 `type="email"` input field, and a set of `type="hidden"` input fields with brackets in their names (making a nested hash). It outputs a nicely formatted JSON hash using the name attribute as the hash key and the value attribute as the hash value.
 
 ##HTML
 ```html
@@ -24,7 +24,7 @@ Here we have a form with traditional `type="text"` input field, an HTML5 `type="
     $('#form').serializeHash()
 ```
 ##Result
-```json
+```js
     {
       firstkey: 'val1',
       email: 'me@example.com',
@@ -38,5 +38,10 @@ Here we have a form with traditional `type="text"` input field, an HTML5 `type="
 
 ---------------------------------------
 
-#####Added by Rilinor on 29/05/2012:
+##Contributions
+
+#####Added by [Rilinor](https://github.com/Rilinor) on 29/05/2012:
 jQuery serialize hash now support serialization of any dom elements (before, only form were supported). Thanks !
+
+#####Added by [Hemphill](https://github.com/Hemphill) on 09/11/2012:
+Adds support for HTML5 input types: search, tel, url, email, datetime, date, month, week, time, datetime-local, number, range, & color.
